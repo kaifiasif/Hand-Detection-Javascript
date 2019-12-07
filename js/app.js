@@ -2,9 +2,10 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 // Select everything in my html
 const video = document.querySelector('#video');
 const audio = document.querySelector('#audio');
+
 const canvas = document.querySelector('#canvas');
 let context = canvas.getContext('2d');
-let modal;
+let model;
 // Start Video 
 handTrack.startVideo(video)
     .then(status => {
@@ -19,7 +20,7 @@ handTrack.startVideo(video)
     })
 
 function detection() {
-    modal.detect(video)
+    model.detect(video)
         .then(predictions => {
             console.log("Predictions", predictions);
             // modal.renderPredictions(predictions, canvas, context, video);
