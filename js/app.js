@@ -22,6 +22,10 @@ function detection() {
     modal.detect(video)
         .then(predictions => {
             console.log("Predictions", predictions);
+            // modal.renderPredictions(predictions, canvas, context, video);
+            if (predictions.length > 0) {
+                audio.play();
+            }
         });
 }
 // Load Handtrack
